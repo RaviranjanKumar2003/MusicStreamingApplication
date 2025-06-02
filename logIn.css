@@ -1,0 +1,136 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loginBox{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.loginBox2{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputBox{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.inputBox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+.inputBox .icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+    top: -8px;
+}
+
+.rememberForgot{
+   margin: -15px 0 15px;
+   font-size: .9em;
+   color: #fff;
+   display: flex;
+   justify-content: space-between;
+}
+.rememberForgot label input{
+    margin-right: 3px;
+}
+.rememberForgot a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+.registerLink{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.registerLink p a{
+    font-weight: 600;
+}
+.registerLink p a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:360px){
+    .loginBox{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+    .inputBox{
+        width: 290px;
+    }
+}

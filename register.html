@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./logIn.css">
+    <title>register</title>
+</head>
+<body>
+    <section>
+        <div class="loginBox2">
+            <form action="./logIn.html">
+                <h2>Register</h2>
+                <div class="inputBox">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" required class="registerUserName">
+                    <label for="text">User Name </label>
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><i class="fa-solid fa-camera"></i></span>
+                    <input type="file" required class="registerUserImg" accept="image/*">
+                    <!-- <label for="password">Choose Profile Pic </label> -->
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" required class="registerEmail">
+                    <label for="Email">Email </label>
+                </div>
+                <div class="inputBox">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required class="registerPasword">
+                    <label for="password">Password </label>
+                </div>
+                <div class="rememberForgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" onclick="registerUser()">Register</button>
+                <div class="registerLink">
+                    <p>Already have an account?<a href="./logIn.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="./music.js"></script>
+</html>

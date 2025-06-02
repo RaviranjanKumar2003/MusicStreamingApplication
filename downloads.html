@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./music.css">
+    <title>Music App2 Downloads</title>
+</head>
+<body class="overflow-x-hidden overflow-y-hidden" style="background-color: #0b1828; background-image: linear-gradient(134deg, rgb(12 26 42) 0%, rgb(10 23 38) 100%)">
+    <!--------- LOADER START -------->
+    <div class="loader">
+        <img src="./images/loader.gif">
+    </div>
+    <!--------- HERO HEADER SECTION -------->
+    <header class="artist w-[100%]  flex relative">
+        <!--------- ASIDE -------->
+        <aside class="w-[13%] h-[100vh] p-[2%] bg-[rgb(12,27,44)] bg-[linear-gradient(145deg,rgb(18_34_55)_0%,rgb(12_27_44)_100%)] relative shadow-[0_42px_60px_0px_rgba(0,0,0,0.12)] transition-[var(--transition)]">
+            <div class="logo">
+                <img src="./images/logo.png">
+                <img src="./images/mini_logo.png" class="small_screen_logo hidden">
+            </div>
+            <div class="smallLogo hidden w-[50px] h-[50px]">
+                <img src="./images/mini_logo.png">
+            </div>
+            <div class="musicMenu mt-[25px] flex flex-col">
+                <h2 class="text-[.9rem] font-normal uppercase text-[#5c7089]">Browser Music</h2>
+                <ul class="downloadsMenu flex flex-col my-[10px] mx-0 w-[100%]  gap-[20px]">
+                    <li>
+                        <a href="./index.html" class=" text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconDiscover"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Discover</p>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="./music.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconMusic"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Music</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./artists.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconArtists "></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Artists</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./albums.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconAlbums"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Albums</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./stations.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconStations"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Stations</p>
+                        </a>
+                    </li>
+                </ul>
+                <h2 class="text-[.9rem] font-normal uppercase text-[#5c7089]">Your Music</h2>
+                <ul class="downloadsMenu flex flex-col my-[10px] mx-0 w-[100%]  gap-[20px]">
+                    <li>
+                        <a href="./downloads.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconDownloads"></span>
+                            <p class="transition-[var(--transition)] text-[#fb324f]">Downloads</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconPurchased"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Purchased</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./favourite.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconFavourites"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Favourites</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                            <span class="icon iconHistory"></span>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">History</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebarBtn absolute top-1/2 left-[100%] -translate-x-1/2 -translate-y-1/2 w-[40px] h-[100px] z-[1] text-[var(--white-color)] flex justify-center items-center cursor-pointer">
+                
+                <i class="fa-solid fa-angle-left text-[var(--gray-ligth-text)] transition-[var(--transition)]"></i>
+            </div>
+        </aside>
+        <!--------- MAIN -------->
+        <div class="heroContainer   w-[87%] p-[1%_3%] flex flex-col  bg-right bg-[length:58.5%]">
+            <div class="heroTop    w-[100%] flex justify-between items-center">
+                <div class="heroTopCol   w-[50%] flex items-center gap-[10px] mt-[-250px]">
+                    <div class="searchBox  w-[60%] h-[50px] rounded-[50px] bg-[rgb(23_37_51)] flex justify-between items-center pt-0 px-[3%] pb-0 ">
+                        <input type="text" placeholder="Search For Song, Artists, Playlist and More...">
+                        <i class="fa-solid fa-magnifying-glass searchBtn"></i>
+                    </div>
+                    <span class="notificationIcon "></span>
+                </div>
+                <div class="userInfo flex flex-col">
+                    <div class="logOut flex ml-[150px]">
+                        <div class="userImg loginImg text-center  h-[50px] w-[50px] flex justify-center items-center rounded-full">
+                            <img src="./images/proflile.jpg" class="h-[50px] w-[50px] flex justify-center items-center rounded-full">
+                        </div>
+                        <div class="userLoginWrapper">
+                            <h2 class=" text-[1rem] font-normal text-[#7c8ea5] ml-[10px] cursor-pointer">Hello, <span class="profileName">Users</span> <i class="fa-solid fa-caret-down"></i></h2>
+                            <ul class="userWrapperDropdown">
+                                <li>
+                                    <a href="#" class="accessProfile">
+                                        <span class="icon iconProfile"></span>
+                                        <p>Profile</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./logIn.html">
+                                        <span class="icon iconLogout"></span>
+                                        <p class="exitLogin">Login</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="profileDivDropdown">
+                        <div class="profileBackX flex justify-end text-2xl cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="loginImg2 h-[100px] w-[100px] bg-[#212121] rounded-full flex justify-center items-center">
+                            <img src="./images/proflile.jpg" class="h-full w-full rounded-full">
+                        </div>
+                        <div>
+                            <h1 class="mt-[20px] text-xl font-bold uppercase"><span class="profileName2">Users</span></h1>
+                        </div>
+                    </div>
+                    <div class="bars hidden">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </div>
+                </div>
+            </div>
+            <div ><h2 class="tab1 "></h2><h2 class="tab2"></h2><h2 class="tab3"></h2> </div> 
+            <div class="downloadContainer">
+                <div class="downloadTitle">
+                    <h2>Free Downloads</h2>
+                </div>
+                <div class="downloadWrapper">
+                    <ul class="downloadColTop">
+                        <li>#</li>
+                        <li>Song Title</li>
+                        <li>Album</li>
+                        <li>Duration</li>
+                        <li>Add To Favourites</li>
+                        <li>More</li>
+                        <li>Remove</li>
+                    </ul>
+                    <!-- download col 1 -->
+                    <ul class="downloadCol activeDownload downloadColBox">
+                        <li><img src="./images/sound_bars.svg" alt=""></li>
+                        <li>Bloodlust</li>
+                        <li>Dream Your Moments</li>
+                        <li>5:26</li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li>
+                            <div class="songOption relative">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="songOptionDropdown  ">
+                                    <div class="songOptionBox">
+                                        <span class="icon favOptionIcon"></span>
+                                        <h3>Favourites</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon downloadptionIcon"></span>
+                                        <h3>Download Now</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon addPlOptionIcon"></span>
+                                        <h3>Add To PlayList</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon shareOptionIcon"></span>
+                                        <h3>Share</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><i class="fa-solid fa-xmark closeDownload"></i></li>
+                    </ul>
+                    <!-- download col 2 -->
+                    <ul class="downloadCol">
+                        <li>02<img src="./images/play_songlist.svg" class="playDownloadBtn"></li>
+                        <li>Desired Games</li>
+                        <li>Dream Your Moments</li>
+                        <li>5:26</li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li>
+                            <div class="songOption relative">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="songOptionDropdown  ">
+                                    <div class="songOptionBox">
+                                        <span class="icon favOptionIcon"></span>
+                                        <h3>Favourites</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon downloadptionIcon"></span>
+                                        <h3>Download Now</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon addPlOptionIcon"></span>
+                                        <h3>Add To PlayList</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon shareOptionIcon"></span>
+                                        <h3>Share</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><i class="fa-solid fa-xmark closeDownload"></i></li>
+                    </ul>
+                    <!-- download col 3 -->
+                    <ul class="downloadCol">
+                        <li>03<img src="./images/play_songlist.svg" class="playDownloadBtn"></li>
+                        <li>Until I Met You</li>
+                        <li>Dream Your Moments</li>
+                        <li>5:26</li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li>
+                            <div class="songOption relative">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="songOptionDropdown  ">
+                                    <div class="songOptionBox">
+                                        <span class="icon favOptionIcon"></span>
+                                        <h3>Favourites</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon downloadptionIcon"></span>
+                                        <h3>Download Now</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon addPlOptionIcon"></span>
+                                        <h3>Add To PlayList</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon shareOptionIcon"></span>
+                                        <h3>Share</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><i class="fa-solid fa-xmark closeDownload"></i></li>
+                    </ul>
+                    <!-- download col 4 -->
+                    <ul class="downloadCol">
+                        <li>04<img src="./images/play_songlist.svg" class="playDownloadBtn"></li>
+                        <li>Dark Alley Acoustic</li>
+                        <li>Dream Your Moments</li>
+                        <li>5:26</li>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li>
+                            <div class="songOption relative">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="songOptionDropdown  ">
+                                    <div class="songOptionBox">
+                                        <span class="icon favOptionIcon"></span>
+                                        <h3>Favourites</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon downloadptionIcon"></span>
+                                        <h3>Download Now</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon addPlOptionIcon"></span>
+                                        <h3>Add To PlayList</h3>
+                                    </div>
+                                    <div class="songOptionBox">
+                                        <span class="icon shareOptionIcon"></span>
+                                        <h3>Share</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><i class="fa-solid fa-xmark closeDownload"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--------- BOTTUM -------->
+        <div class="bottumContainer">
+            <span class="bottumContainer_Btn">
+                <i class="fa-solid fa-angle-left text-[var(--gray-ligth-text)]"></i>
+            </span>
+            <div class="musicBox">
+                <div class="musicBoxImg">
+                    <img src="./images/song1.jpg" id="masterPoster">
+                </div>
+                <div class="musicBoxText" id="title">
+                    <h2>Don't Let Me</h2>
+                    <p>Mushroom Records</p>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="musucPlayWrapper">
+                <div class="musicPlayOption">
+                    <button class="musicOptionPrev">
+                        <span class="icon playOption playPrev"></span>
+                    </button>
+                    <button class="play_button" >
+                        <span class=" playpause" id="masterPlay"><i class="fa-solid fa-play"></i></span>
+                    </button>
+                    <button class="musicOptionNext">
+                        <span class="icon play_option play_next"></span>
+                    </button>
+                </div>
+                <div class="musicPlayBox">
+                    <div class="musicPlayCol">
+                        <div class="musicPlayLine">
+                            <div class="musicTimeline">
+                                <p id="currentStart">00:00</p>
+                                <p id="currentEnd">04:27</p>
+                            </div>
+                            <div id="seek"></div>
+                            <div id="dot"></div>
+                        </div>
+                    </div>
+                    <div class="musicVolOption">
+                        <div class="musicVolume">
+                            <img src="./images/volume.svg" alt="">
+                        </div>
+                        <button class="musicMode shuffleMode">
+                            <span class="shuffleIcon"></span>
+                        </button>
+                        <button class="musicMode repeatMode">
+                            <span class="repeatIcon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="musicBottomBtn">
+                <button><i class="fa-solid fa-angle-up"></i>Queue</button>
+            </div>
+            <div class="queueDropdownBox">
+                <div class="sidebarBtn queueBtn">
+                    <i class="fa-solid fa-angle-down  text-[var(--gray-ligth-text)] transition-[var(--transition)] cursor-pointer"></i>
+                </div>
+                <h1>QUEUE</h1>
+                <div class="queueWrapper">
+                    <ul class="productList">
+
+                    </ul>
+                </div>
+                <div class="queuBtns">
+                    <button>Save Playlist</button>
+                    <a href="#">Clear</a>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+<script src="./music.js"></script>
+</html>

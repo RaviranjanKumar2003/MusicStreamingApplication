@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'poppins';
+    scroll-behavior: smooth;
+}
+
+:root{
+    --theme-color:#fb324f;
+    --gray-text:#5c7089;
+    --gray-ligth-text:#7c8ea5;
+    --text-color:#aebed3;
+    --ligth-color:rgb(21 37 55);
+    --white-color:#fff;
+    --black-color:#000;
+    --prime-gradient:linear-gradient(90deg, rgb(255,85,62) 0%, rgb(255,0,101) 100%);
+    --prime-gradient2:linear-gradient(-90deg, rgb(255,85,62) 0%, rgb(255,0,101) 100%);
+    --dark-gradient:linear-gradient(145deg, rgb(18,34,55) 0%, rgb(12,27,44) 100%);
+
+    --transition:.3s;
+    --transition2:.6s;
+   
+}
+
