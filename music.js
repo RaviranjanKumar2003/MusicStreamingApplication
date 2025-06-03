@@ -82,7 +82,7 @@ function logoutUser() {
     // window.open("/index.html"); 
     // window.location.href = "/index.html";
 }
-/*============================ LOGIN/LOGOUT END =============================*/
+/*============================================ LOGIN/LOGOUT END =============================*/
 
 /*============= SHOW & HIDE SIDEBAR ===================*/
 
@@ -135,7 +135,101 @@ profileBackX.addEventListener('click',()=>{
     profileDivDropdown.classList.remove('showProfileDropdown');
 });
 
+/*=========================== BOTTOM CONTAINER MENU ======================*/ 
 
+
+let bottom_toggle_btn=document.querySelector('.bottumContainer_Btn');
+let bottom_toggle_icon=document.querySelector('.bottumContainer_Btn i');
+let bottumContainer=document.querySelector('.bottumContainer');
+
+bottom_toggle_btn.addEventListener('click',()=>{
+    bottumContainer.classList.toggle('show_bottom_box');
+    bottom_toggle_icon.classList.toggle('icon_rotate');
+});
+
+/*========================== QUEUE DROPDOWN BOX ==================*/
+
+
+let musicBottomBtn=document.querySelector('.musicBottomBtn');
+let queuDropdownBox=document.querySelector('.queueDropdownBox');
+let queueBtn=document.querySelector('.queueBtn');
+let productList=document.querySelector('.productList');
+
+musicBottomBtn.addEventListener('click',()=>{
+    queuDropdownBox.classList.add('show_queue_box');
+});
+queueBtn.addEventListener('click',()=>{
+    queuDropdownBox.classList.remove('show_queue_box');
+});
+
+
+/*======== Add To Queue =======*/
+function addToQueue(id) {
+    if (!checkoutList[id]) {
+        checkoutList[id] = { ...songs[id], quantity: 1 };
+    } else {
+        checkoutList[id].quantity += 1;
+    }
+    reloadQueue();
+}
+
+
+function reloadQueue() {
+    productList.innerHTML = "";
+
+    Object.keys(checkoutList).forEach((key) => {
+        const item = checkoutList[key];
+        if (item) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src="${item.poster}" alt="Album art for ${item.songName}">
+                <div class="songDet flex flex-col">
+                    ${item.songName}
+                </div>
+            `;
+            productList.appendChild(li);
+        }
+    });
+}
+
+
+/*=======================BOTTOM START,  PLAT PAUSE NEXT PREV OPTION =========================*/ 
+
+let playPrev=document.querySelector('.musicOptionPrev');
+let playNext=document.querySelector('.musicOptionNext');
+let shuffleMode=document.querySelector('.shuffleMode');
+let repeatMode=document.querySelector('.repeatMode');
+
+
+playNext.addEventListener('click',()=>{
+    playNext.classList.toggle('music_play_btn_active');
+});
+playPrev.addEventListener('click',()=>{
+    playPrev.classList.toggle('music_play_btn_active');
+});
+shuffleMode.addEventListener('click',()=>{
+    shuffleMode.classList.toggle('music_play_btn_active');
+});
+repeatMode.addEventListener('click',()=>{
+    repeatMode.classList.toggle('music_play_btn_active');
+});
+
+/*============================ ON OFF VPLUME OPTION =======================*/ 
+
+
+let musicVolumeImg = document.querySelector('.musicVolume img');
+
+musicVolumeImg.addEventListener('click', () => {
+    let volumeMute = 'volume-mute.png';  
+    let volumeOn = './images/volume.svg'; 
+
+    if (musicVolumeImg.src.includes(volumeMute)) {
+        musicVolumeImg.src = volumeOn;
+    } 
+    else {
+        musicVolumeImg.src = './images/volume-mute.png';
+    }
+});
 
 
 /*====================== SONG CONTAINAR OFFLINE ======================*/
@@ -591,102 +685,11 @@ tab3.addEventListener('click', ()=>{
 });
 
 
-/*======================= PLAT PAUSE NEXT PREV OPTION =========================*/ 
-
-let playPrev=document.querySelector('.musicOptionPrev');
-let playNext=document.querySelector('.musicOptionNext');
-let shuffleMode=document.querySelector('.shuffleMode');
-let repeatMode=document.querySelector('.repeatMode');
-
-
-playNext.addEventListener('click',()=>{
-    playNext.classList.toggle('music_play_btn_active');
-});
-playPrev.addEventListener('click',()=>{
-    playPrev.classList.toggle('music_play_btn_active');
-});
-shuffleMode.addEventListener('click',()=>{
-    shuffleMode.classList.toggle('music_play_btn_active');
-});
-repeatMode.addEventListener('click',()=>{
-    repeatMode.classList.toggle('music_play_btn_active');
-});
-
-/*============================ ON OFF VPLUME OPTION =======================*/ 
-
-
-let musicVolumeImg = document.querySelector('.musicVolume img');
-
-musicVolumeImg.addEventListener('click', () => {
-    let volumeMute = 'volume-mute.png';  
-    let volumeOn = './images/volume.svg'; 
-
-    if (musicVolumeImg.src.includes(volumeMute)) {
-        musicVolumeImg.src = volumeOn;
-    } 
-    else {
-        musicVolumeImg.src = './images/volume-mute.png';
-    }
-});
-
-/*========================== QUEUE DROPDOWN BOX ==================*/
-
-
-let musicBottomBtn=document.querySelector('.musicBottomBtn');
-let queuDropdownBox=document.querySelector('.queueDropdownBox');
-let queueBtn=document.querySelector('.queueBtn');
-let productList=document.querySelector('.productList');
-
-musicBottomBtn.addEventListener('click',()=>{
-    queuDropdownBox.classList.add('show_queue_box');
-});
-queueBtn.addEventListener('click',()=>{
-    queuDropdownBox.classList.remove('show_queue_box');
-});
-
-
-/*======== Add To Queue =======*/
-function addToQueue(id) {
-    if (!checkoutList[id]) {
-        checkoutList[id] = { ...songs[id], quantity: 1 };
-    } else {
-        checkoutList[id].quantity += 1;
-    }
-    reloadQueue();
-}
-
-
-function reloadQueue() {
-    productList.innerHTML = "";
-
-    Object.keys(checkoutList).forEach((key) => {
-        const item = checkoutList[key];
-        if (item) {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <img src="${item.poster}" alt="Album art for ${item.songName}">
-                <div class="songDet flex flex-col">
-                    ${item.songName}
-                </div>
-            `;
-            productList.appendChild(li);
-        }
-    });
-}
 
 
 
-/*=========================== BOTTOM CONTAINER MENU ======================*/ 
 
 
-let bottom_toggle_btn=document.querySelector('.bottumContainer_Btn');
-let bottom_toggle_icon=document.querySelector('.bottumContainer_Btn i');
-let bottumContainer=document.querySelector('.bottumContainer');
-
-bottom_toggle_btn.addEventListener('click',()=>{
-    bottumContainer.classList.toggle('show_bottom_box');
-    bottom_toggle_icon.classList.toggle('icon_rotate');
-});
 
 
 
