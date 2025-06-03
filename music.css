@@ -1082,7 +1082,7 @@
 
 
 .movieContainer{
-    width: 90vw;
+    width: 91vw;
     height: 100vh;
     margin-top: -240px;
     margin-left: -45px;
@@ -1138,11 +1138,12 @@
 
  .video-card-container {
     position: relative;
-    width: 100%;
+    width: 97.5%;
     margin: auto;
     height: 10vw;
     display: flex;
     margin-bottom: 20px;
+    margin-left: -10px;
     justify-content: space-between;
  }
 
@@ -1330,6 +1331,79 @@
     height: 55vh;
     width: 100%;
  }
+
+
+
+ @media (max-width:1200px){
+    .movieHeader aside{
+        z-index: 2;
+    }
+    .movieHeader .bottumContainer{
+        z-index: 3;
+    }
+    .movieHeader aside{
+        width: 15%;
+    }
+    .movieHeader .heroContainer{
+        width: 85%;
+    }
+
+ }
+
+  @media (max-width:1024px){
+    .movieHeader aside{
+        width: 16%;
+    }
+    .movieHeader .heroContainer{
+        width: 84%;
+    }
+  }
+
+ @media (max-width:768px){
+    .movieHeader aside{
+        z-index: 1;
+    }
+    .movieHeader .bottumContainer{
+        z-index: 2;
+    }
+    .movieContainer{
+        margin-left: 10px;
+    }
+      .movieHeader aside{
+        width: 20%;
+    }
+    .movieHeader .heroContainer{
+        width: 80%;
+    }
+}
+
+@media (max-width:500px){
+     .movieHeader aside{
+        margin-top: 0;
+    }
+    .movieHeader .heroTop{
+        margin-top: 120px;
+        width: 85vw;
+    }
+    .movieContainer{
+        margin-top: -250px;
+    }
+   .movieHeader .profileDivDropdown{
+    margin-left: -30px;
+   }
+    .video-card-container{
+        margin-top: 50px;
+    }
+    .carousel-container{
+        height: 120vh;
+        width: 100vw;
+    }
+    
+}
+
+
+
+   
 /*====================== MOVIE PAGR SECTION END ================*/
 
 
