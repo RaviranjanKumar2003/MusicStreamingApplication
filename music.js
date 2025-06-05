@@ -582,9 +582,6 @@ Array.from(document.getElementsByClassName('playImg')).forEach((e)=>{
     });
 });
 
-
-
-
 let currentStart = document.getElementById('currentStart');
 let currentEnd = document.getElementById('currentEnd');
 
@@ -620,6 +617,51 @@ music.addEventListener('timeupdate', ()=>{
     dot.style.marginLeft = `${seekbar}%`;
 
 }) ;
+
+
+
+function playSong(index) {
+    currentSongIndex = index;
+    const song = songs[currentSongIndex];
+
+    music.src = `./audio/mp3-${currentSongIndex + 1}.mp3`;
+    masterPoster.src = song.poster;
+    title.innerHTML = song.songName;
+    music.play();
+    
+    masterPlay.classList.add('playing');
+    playIcon.classList.replace('fa-play', 'fa-pause');
+
+    makeAllBackground();
+    document.getElementsByClassName('songCol')[currentSongIndex].style.background = 'var(--theme-color)';
+}
+
+// Next Song
+document.querySelector('.musicOptionNext').addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex + 1) % songs.length; // wrap around
+    playSong(currentSongIndex);
+});
+
+// Previous Song
+document.querySelector('.musicOptionPrev').addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // wrap around
+    playSong(currentSongIndex);
+});
+
+
+const volumeBtn = document.querySelector('.musicVolume');
+volumeBtn.addEventListener('click', () => {
+    music.muted = !music.muted;
+    const icon = volumeBtn.querySelector('i');
+    if (music.muted) {
+        icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+    } else {
+        icon.classList.replace('fa-volume-mute', 'fa-volume-up');
+    }
+});
+
+
+
 
 /*============================ SONG OPTION DROPDOWN MENU ==================================*/ 
 
