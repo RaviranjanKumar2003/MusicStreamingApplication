@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./music.css">
-    <title>Movies</title>
+    <title>Music App2</title>
 </head>
 <body class="overflow-x-hidden overflow-y-hidden" style="background-color: #0b1828; background-image: linear-gradient(134deg, rgb(12 26 42) 0%, rgb(10 23 38) 100%)">
     <!--------- LOADER START -------->
@@ -16,7 +16,7 @@
         <img src="./images/loader.gif">
     </div>
     <!--------- HERO HEADER SECTION -------->
-    <header class="movieHeader w-[100%]  flex relative">
+    <header class="w-[100%]  flex relative">
         <!--------- ASIDE -------->
         <aside class="w-[13%] h-[100vh] p-[2%] bg-[rgb(12,27,44)] bg-[linear-gradient(145deg,rgb(18_34_55)_0%,rgb(12_27_44)_100%)] relative shadow-[0_42px_60px_0px_rgba(0,0,0,0.12)] transition-[var(--transition)]">
             <div class="logo">
@@ -28,17 +28,17 @@
             </div>
             <div class="musicMenu mt-[25px] flex flex-col">
                 <h2 class="text-[.9rem] font-normal uppercase text-[#5c7089]">Browser Music</h2>
-                <ul class="movieMenu flex flex-col my-[10px] mx-0 w-[100%]  gap-[20px]">
+                <ul class="flex flex-col my-[10px] mx-0 w-[100%]  gap-[20px]">
                     <li>
                         <a href="./index.html" class=" text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
                             <span class="icon iconDiscover"></span>
-                            <p class="transition-[var(--transition)] text-[#fb324f]">Discover</p>
+                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Discover</p>
                         </a>
                     </li>
                      <li>
                         <a href="./music.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
                             <span class="icon iconMusic"></span>
-                            <p class="transition-[var(--transition)] hover:text-[#fb324f]">Music</p>
+                            <p class="transition-[var(--transition)] text-[#fb324f]">Music</p>
                         </a>
                     </li>
                     <li>
@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./album.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
+                        <a href="./albums.html" class="text-[#7c8ea5] text-[1rem] font-medium flex items-center gap-[10px]">
                             <span class="icon iconAlbums"></span>
                             <p class="transition-[var(--transition)] hover:text-[#fb324f]">Albums</p>
                         </a>
@@ -94,7 +94,7 @@
             </div>
         </aside>
         <!--------- MAIN -------->
-        <div class="heroContainer   w-[87%] p-[1%_3%] flex flex-col bg-no-repeat bg-right bg-[length:58.5%]">
+        <div class="heroContainer   w-[87%] p-[1%_3%] flex flex-col bg-[url('./images/hero_bg.png')] bg-no-repeat bg-right bg-[length:58.5%]">
             <div class="heroTop    w-[100%] flex justify-between items-center">
                 <div class="heroTopCol   w-[50%] flex items-center gap-[10px] mt-[-250px]">
                     <div class="searchBox  w-[60%] h-[50px] rounded-[50px] bg-[rgb(23_37_51)] flex justify-between items-center pt-0 px-[3%] pb-0 ">
@@ -125,9 +125,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="bars hidden">
-                        <i class="fa-solid fa-bars-staggered"></i>
-                    </div>
+                         <div class="bars hidden">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </div>
                     </div>
                     <div class="profileDivDropdown">
                         <div class="profileBackX flex justify-end text-2xl cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
@@ -140,280 +140,22 @@
                     </div>
                 </div>
             </div>
-           <div class="movieContainer">
-            <div class="slideContent text-[#fff]">
-                <!-- <div class="smallImg">
-                    <img src="./images/mufasa.avif" class="h-[200px] w-[full]">
-                </div> -->
-                <!-- <h1 class="flex mt-[20px] font-bold">
-                    <span class="text-2xl ">2024</span>
-                    <div class=" ml-[10px] text-2xl   rounded-xl">U/A 7+</div>
-                    <span class="text-2xl  ml-[10px]">1h 57m</span>
-                    <span class="text-2xl ml-[10px]">4 Languages</span>
-                </h1> -->
-                <!-- <p class=" text-lg mt-[20px]">iis aperiam nemo in sapiente? Odit, exercitationem architecto alias excepturi vero saepe quidem nostrum, perspiciatis velit maiores fuga itaque sed minus dolor?</p> -->
-                <div class="flex">
-                    <button class="w-[300px] h-[50px] cursor-pointer text-2xl  font-bold bg-gradient-to-br from-[#008cff] via-[#6a00ff] to-[#e100ff] rounded-2xl mt-[20px]">Watch Now</button>
-                    <div class="w-[80px] h-[50px] flex justify-center items-center mt-[20px] ml-[10px] rounded-2xl " title="Watchlist">
-                        <img src="./movieImg/add.png" alt="" class="h-[30px] cursor-pointer">
-                    </div>
+            <div class="songsContainer  w-[41%] flex flex-col relative mt-[-230px]">
+                <div class="songsTabs  flex items-center gap-[50px] pb-0 relative">
+                    <h2 class="tab1 activeSongList">Today Top Picks</h2>
+                    <h2 class="tab2">Trending Songs</h2>
+                    <h2 class="tab3">New Release</h2>
                 </div>
-                
-            </div>
-              <div class="carousel-container">
-                  <div class="carousel">
-                      <div class="slider">
-                          <img src="./images/mov4.avif" alt="">
-                      </div>
-                  </div>
-              </div>
-              
-
-              <div class="video-card-container">
-                  <div class="video-card">
-                      <img src="./movieImg/disney.PNG" class="video-card-image" alt="">
-                      <video src="./videos/disney (1).mp4" mute loop class="card-video"></video>
-                  </div>
-        
-                  <div class="video-card">
-                      <img src="./movieImg/pixar.PNG" class="video-card-image" alt="">
-                      <video src="./videos/pixar.mp4" mute loop class="card-video"></video>
-                  </div>
-        
-                  <div class="video-card">
-                      <img src="./movieImg/marvel.PNG" class="video-card-image" alt="">
-                      <video src="./videos/marvel.mp4" mute loop class="card-video"></video>
-                  </div>
-        
-                  <div class="video-card">
-                      <img src="./movieImg/star-wars.PNG" class="video-card-image" alt="">
-                      <video src="./videos/star-war.mp4" mute loop class="card-video"></video>
-                  </div>
-        
-                  <div class="video-card">
-                      <img src="./movieImg/geographic.PNG" class="video-card-image" alt="">
-                      <video src="./videos/geographic.mp4" mute loop class="card-video"></video>
-                  </div>
+                <div class="songsWrapper songsWrapper1  w-[100%] h-[600px] overflow-scroll flex flex-col gap-[20px] mt-[20px] mr-[20px]">
+                   <audio id="audioPlayer" controls></audio>
                 </div>
-
-                <h1 class="title">recommended for you</h1>
-                <div class="movies-list">
-                    <button class="pre-btn"><img src="./movieImg/pre.png" alt=""></button>
-                    <button class="nxt-btn"><img src="./movieImg/nxt.png" alt=""></button>
-                    <div class="card-container">
-
-                    <div class="card">
-                         <img src="./movieImg/poster 1.png" alt="" class="card-img">
-                         <div class="card-body">
-                             <h2 class="name">movie name</h2>
-                             <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                             <button class="watchlist-btn">add to watchlist</button>
-                          </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 2.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 3.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 4.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 5.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 6.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./movieImg/poster 7.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
+                <div class="songsWrapper songsWrapper2  w-[100%] h-[600px] overflow-scroll flex flex-col gap-[20px] mt-[20px] mr-[20px]">
+                   <audio id="audioPlayer2" controls style="display: none;"></audio>
+                </div>
+                <div class="songsWrapper songsWrapper3  w-[100%] h-[600px] overflow-scroll flex flex-col gap-[20px] mt-[20px] mr-[20px]">
+                   
                 </div>
             </div>
-
-            <h1 class="title">Popular Shows</h1>
-            <div class="movies-list">
-                <button class="pre-btn"><img src="./movieImg/pre.png" alt=""></button>
-                <button class="nxt-btn"><img src="./movieImg/nxt.png" alt=""></button>
-                <div class="card-container">
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 11.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 9.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 8.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 7.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 6.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 6.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 5.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        
-            <!-- New Releases -->
-            <h1 class="title">New Releases</h1>
-            <div class="movies-list">
-                <button class="pre-btn"><img src="./movieImg/pre.png" alt=""></button>
-                <button class="nxt-btn"><img src="./movieImg/nxt.png" alt=""></button>
-                <div class="card-container">
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 12.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 6.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 2.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 10.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 4.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 8.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                    <div class="card">
-                        <img src="./movieImg/poster 4.png" alt="" class="card-img">
-                        <div class="card-body">
-                            <h2 class="name">movie name</h2>
-                            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
-                            <button class="watchlist-btn">add to watchlist</button>
-                        </div>
-                    </div>
-        
-                </div>
-            <div class="demo">
-            
-            </div>      
-        </div>
         </div>
         <!--------- BOTTUM -------->
         <div class="bottumContainer">
@@ -488,5 +230,4 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
 <script src="./music.js"></script>
-<script src="./movie.js"></script>
 </html>
