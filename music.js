@@ -44,11 +44,12 @@ function loginFun() {
     if (userEmail === savedEmail && userPassword === savedPassword) {
         alert("Login successful!");
         localStorage.setItem('isLoggedIn', 'true');
-        window.open("/music.html");
-        window.remove("./logIn.html");
-        // window.location.href = "/index.html";
-
-
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1000);
+        // window.open("./index.html");
+    //     console.log("Redirecting to index.html");
+    //    window.location.href = "./index.html";
 
     } else {
         alert("Invalid email or password.");
